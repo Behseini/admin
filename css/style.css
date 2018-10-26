@@ -1,1 +1,177 @@
-test
+<nav class="navbar navbar-light bg-light fixed-top">
+   <form class="form-inline">
+      <button id="toggler" class="btn btn-sm btn-outline-secondary" type="button">Toggle</button>
+   </form>
+</nav>
+<div class="row">
+   <div id="sidebar" class="">
+       <div class="accordion" id="accordionExample">
+    <div class="card">
+
+      <div class="card-header" id="headingOne">
+        <div class="btn-group d-flex" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary w-100 mar d-none" data-toggle="popover"   ><i class="fa fa-list"></i></button>
+          <button type="button" class="btn btn-secondary w-100 mar1" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><i class="fa fa-list"></i></button>
+          <button class="btn btn-secondary w-100 mar1" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Assets</button>
+        </div>
+      </div>
+
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><i class="fa fa-list"></i></button>
+          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">Categories </button>
+        </div>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree"><i class="fa fa-list"></i></button>
+          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">Categories </button>
+        </div>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+   <!-- End of Sidebr    -->
+   <div id="content" class="" >
+      <div class="container-fluid">
+         <div class="alert alert-secondary" role="alert">
+            This is a secondary alert—check it out!
+         </div>
+      </div>
+   </div>
+   </div>
+
+
+html, body {
+   min-height:100vh;
+   background:green;
+
+}
+.row{
+   padding:0px;
+   margin:0px;
+}
+.navbar{
+        z-index:10002;
+}
+#sidebar {
+   height:100vh;
+   background:khaki;
+  -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+   padding-top:100px;
+   width:15%;
+   float:left;
+ padding-left:6px;
+   padding-right:6px !important;
+}
+#content {
+   height:100vh;
+   background:#f5f5f5;
+  -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+   padding-top:100px;
+   width:85%;
+   float:left;
+     z-index:10001;
+}
+.max-sidebar {
+   width:5% !important;
+  -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+}
+.max-content{
+   width:95% !important;
+       -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+}
+.fadein-td{
+
+opacity: 1;
+          -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+   animation: fadein 2s;
+    display:block;
+}
+.fadeout-td{
+
+opacity: 0;
+          -webkit-transition: all .3s linear 0s;
+  transition: all .3s linear 0s;
+   animation: fadeout 2s;
+   display:none;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.bs-example{
+    	margin: 200px 150px 0;
+    }
+    .popover-title .close{
+        position: relative;
+        bottom: 3px;
+    }
+
+
+    .popover{
+       z-index:20001;
+       margin-left:29px;
+    }
+
+
+$("#toggler").on("click", function(){
+   $("#sidebar").toggleClass('max-sidebar');
+    $("#sidebar table td").toggleClass('fadein-td fadeout-td');
+    //$("#sidebar table td:nth-child(2)").toggleClass('hidden-td');
+   $("#content").toggleClass('max-content');
+    $(".mar").toggleClass('d-none');
+    $(".mar1").toggleClass('d-none');
+});
+
+$('[data-toggle="popover"]').popover({
+        placement : 'right',
+        html : true,
+        title : 'User Info <a href="#" class="close" data-dismiss="alert">&times;</a>',
+        content : '<div class="media"><a href="#" class="pull-left"><img src="/examples/images/avatar-tiny.jpg" class="media-object" alt="Sample Image"></a><div class="media-body"><h4 class="media-heading">Jhon Carter</h4><p>Excellent Bootstrap popover! I really love it.</p></div></div>'
+    });
+    $(document).on("click", ".popover .close" , function(){
+        $(this).parents(".popover").popover('hide');
+    });
