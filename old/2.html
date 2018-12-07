@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="http://localhost:8080/src/bootstrap4.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/2.css" crossorigin="anonymous">
+
+  <title>Heap Keep</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-lg navbar-light bg-light navbar-desktop-top fixed-top">
+      <div class="left-clm">
+        <span class="navbar-brand">Heap Keep</span>
+      </div>
+      <div class="right-clm">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="task-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="icon icon-drawer"></i>
+              </a>
+              <div class="dropdown-menu desktop-dropdown-menu" aria-labelledby="task-dropdown">
+                <div class="container-fluid">
+                  <div class="row">
+                    <a class="btn btn-dropp-top  btn-sm btn-block"><i class="icon icon-flag"></i> Tasks</a>
+                  </div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Lorem Your Task</li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Morbi leo risus</li>
+                    <li class="list-group-item">Porta ac consectetur ac</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                  </ul>
+                  <div class="row nav" role="tablist">
+                    <a class="btn btn-dropp-down  btn-sm btn-block" id="tasks-tab" data-toggle="pill" href="#hk-tasks"
+                      role="tab" aria-controls="hk-tasks-tab" aria-selected="false">See/Edit All Tasks
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="reporst-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="icon icon-bar-chart"></i>
+              </a>
+              <div class="dropdown-menu desktop-dropdown-menu" aria-labelledby="reports-dropdown">
+                <div class="container-fluid">
+                  <div class="row">
+                    <a class="btn btn-dropp-top  btn-sm btn-block"> <i class="icon icon-printer"></i> Reports</a>
+                  </div>
+                  <div class="row task-shortcuts nav" role="tablist">
+                    <a class="col-4 task-shortcuts-task" id="asset-reports-tab" data-toggle="pill" href="#hk-asset-reports"  role="tab" aria-controls="hk-asset-reports-tab" aria-selected="false">
+                      <i class="task-icon icon icon-grid"></i>
+                      <small class="">Assets</small>
+                    </a>
+                    <a class="col-4 task-shortcuts-task" id="category-reports-tab" data-toggle="pill" href="#hk-category-reports"  role="tab" aria-controls="hk-category-reports-tab" aria-selected="false">
+                      <i class="task-icon icon icon-layers"></i>
+                      <small class="">Categories</small>
+                    </a>
+                    <a class="col-4 task-shortcuts-task" id="user-reports-tab" data-toggle="pill" href="#hk-user-reports"  role="tab" aria-controls="hk-user-reports-tab" aria-selected="false">
+                        <i class="task-icon icon icon-user"></i>
+                        <small class="">Users</small>
+                      </a>
+                    <a class="col-4 task-shortcuts-task" id="location-reports-tab" data-toggle="pill" href="#hk-location-reports"  role="tab" aria-controls="hk-location-reports-tab" aria-selected="false">
+                      <i class="task-icon icon-pointer"></i>
+                      <small class="">Locations</small>
+                    </a>
+                    <a class="col-4 task-shortcuts-task" id="log-reports-tab" data-toggle="pill" href="#hk-log-reports"  role="tab" aria-controls="hk-log-reports-tab" aria-selected="false">
+                      <i class="task-icon icon-loop"></i>
+                      <small class="">Logs</small>
+                    </a>
+                    <a class="col-4 task-shortcuts-task" id="service-reports-tab" data-toggle="pill" href="#hk-service-reports"  role="tab" aria-controls="hk-service-reports-tab" aria-selected="false">
+                      <i class="task-icon icon-wrench"></i>
+                      <small class="">Services</small>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="log-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="icon icon-loop"></i>
+              </a>
+              <div class="dropdown-menu desktop-dropdown-menu" aria-labelledby="task-dropdown">
+                <div class="container-fluid">
+                  <div class="row">
+                    <a class="btn btn-dropp-top  btn-sm btn-block"><i class="icon icon-loop"></i> Activities</a>
+                  </div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Maria loged at 2</li>
+                    <li class="list-group-item">Printer added to Assets</li>
+                    <li class="list-group-item">New Location Added</li>
+                    <li class="list-group-item">User Removed </li>
+                    <li class="list-group-item">New Assets added</li>
+                  </ul>
+                  <div class="row nav" role="tablist">
+                    <a class="btn btn-dropp-down  btn-sm btn-block" id="logs-tab" data-toggle="pill" href="#hk-logs"
+                      role="tab" aria-controls="hk-logs-tab" aria-selected="false">Log All Activities
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="notification-dropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="icon icon-bell"></i>
+              </a>
+              <div class="dropdown-menu desktop-dropdown-menu" aria-labelledby="task-dropdown">
+                <div class="container-fluid">
+                  <div class="row">
+                    <a class="btn btn-dropp-top  btn-sm btn-block"><i class="icon icon-equalizer"></i> Notifications</a>
+                  </div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Asset XXX 1 required Service</li>
+                    <li class="list-group-item">Assets xxx 2 Update License</li>
+                    <li class="list-group-item">New Service added</li>
+                    <li class="list-group-item">Print Data added</li>
+                    <li class="list-group-item">Lorem</li>
+                  </ul>
+                  <div class="row nav" role="tablist">
+                    <a class="btn btn-dropp-down  btn-sm btn-block" id="notifications-tab" data-toggle="pill" href="#hk-notifications"
+                      role="tab" aria-controls="hk-notifications-tab" aria-selected="false">See/Edit All Notifications
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="login-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <i class="icon icon-lock"></i>
+              </a>
+              <div class="dropdown-menu desktop-dropdown-menu dropdown-menu-right" aria-labelledby="login-dropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-desktop-bottom fixed-bottom">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+           <li class="nav-item text-center">
+      <p class="nav-link">Heap Keep</p>
+    </li>
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+  <div id="sidebar" class="left-clm">
+      <div class="accordion" id="hk-sidebar-accordion">
+          <div class="card">
+              <div class="card-header" id="headingDashboard">
+<!--                  <div class="row nav w-100" role="tablist" >-->
+                <div class="btn-group d-flex dropright" role="group" aria-label="Heap Keep App">
+           <button type="button" class="btn btn-card btn-card-n w-100 d-none text-center" id="hk-dashboard-tab" data-toggle="pill" href="#hk-dashboard-reports"  role="tab" aria-controls="hk-dashboard-reports-tab" aria-selected="false">
+              <i class="icon icon-list"></i>
+            </button>
+            <button type="button" class="btn btn-card btn-card-w w-100" id="hk-dashboard-tab-w" data-toggle="pill" href="#hk-dashboard"  role="tab" aria-controls="hk-dashboard-tab" aria-selected="false">  <i class="icon icon-list"></i> Dashboard</button>
+            </div>
+<!--            </div>-->
+            </div>
+            </div>
+          <div class="card">
+          <div class="card-header" id="headingAssets">
+            <div class="btn-group d-flex dropright" role="group" aria-label="Heap Keep App">
+       <button type="button" class="btn btn-card btn-card-n w-100 d-none text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="icon icon-grid"></i>
+        </button>
+        <button type="button" class="btn btn-card btn-card-w w-100" data-toggle="collapse" data-target="#collapseAssets" aria-expanded="true" aria-controls="collapseAssets">  <i class="icon icon-grid"></i> Assets</button>
+        <div class="dropdown-menu dropdown-menu-sm">
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-header w-100">
+                <i class="icon icon-grid"></i> Assets
+              </div>
+          </div>
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-body w-100">
+                  <div class="row nav" role="tablist" >
+                  <button type="button" class="btn btn-card-sm w-100" id="assets-tab" data-toggle="pill" href="#hk-assets" role="tab" aria-controls="hk-assets-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Assets</button>
+                  <button type="button" class="btn btn-card-sm w-100" id="assets-edit-tab" data-toggle="pill" href="#hk-assets-editd" role="tab" aria-controls="hk-assets-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Assets</button>
+              </div>
+                </div>
+          </div>
+        </div>
+      </div>
+          </div>
+          <!-- Collapse -->
+          <div id="collapseAssets" class="collapse" aria-labelledby="headingAssets" data-parent="#hk-sidebar-accordion">
+            <div class="card-body card-body-w d-flex">
+                <div class="row nav w-100" role="tablist" >
+                    <button type="button" class="btn btn-card-sm w-100" id="assets-tab-w" data-toggle="pill" href="#hk-assets" role="tab" aria-controls="hk-assets-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Assets</button>
+                    <button type="button" class="btn btn-card-sm w-100" id="assets-edit-tab-w" data-toggle="pill" href="#hk-assets-editd" role="tab" aria-controls="hk-assets-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Assets</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingCategories">
+            <div class="btn-group d-flex dropright" role="group" aria-label="Heap Keep App">
+       <button type="button" class="btn btn-card btn-card-n w-100 d-none text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="icon icon-layers"></i>
+        </button>
+        <button type="button" class="btn btn-card btn-card-w w-100" data-toggle="collapse" data-target="#collapseCategories" aria-expanded="true" aria-controls="collapseCategories">  <i class="icon icon-layers"></i> Categories</button>
+        <div class="dropdown-menu dropdown-menu-sm">
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-header w-100">
+                <i class="icon icon-layers"></i> Categories
+              </div>
+          </div>
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-body w-100">
+                  <div class="row nav w-100" role="tablist" >
+                      <button type="button" class="btn btn-card-sm w-100" id="categories-tab-w" data-toggle="pill" href="#hk-categories" role="tab" aria-controls="hk-categories-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Categories</button>
+                      <button type="button" class="btn btn-card-sm w-100" id="categories-edit-tab-w" data-toggle="pill" href="#hk-categories-editd" role="tab" aria-controls="hk-categories-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Category</button>
+                  </div>
+       </div>
+          </div>
+        </div>
+      </div>
+          </div>
+          <!-- Collapse -->
+          <div id="collapseCategories" class="collapse" aria-labelledby="headingCategories" data-parent="#hk-sidebar-accordion">
+            <div class="card-body card-body-w d-flex">
+                <div class="row nav w-100" role="tablist" >
+                    <button type="button" class="btn btn-card-sm w-100" id="categories-tab-w" data-toggle="pill" href="#hk-categories" role="tab" aria-controls="hk-categories-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Categories</button>
+                    <button type="button" class="btn btn-card-sm w-100" id="categories-edit-tab-w" data-toggle="pill" href="#hk-categories-editd" role="tab" aria-controls="hk-categories-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Category</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingUsers">
+            <div class="btn-group d-flex dropright" role="group" aria-label="Heap Keep App">
+       <button type="button" class="btn btn-card btn-card-n w-100 d-none text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="icon icon-users"></i>
+        </button>
+        <button type="button" class="btn btn-card btn-card-w w-100" data-toggle="collapse" data-target="#collapseUsers" aria-expanded="true" aria-controls="collapseUsers">  <i class="icon icon-users"></i> Users</button>
+        <div class="dropdown-menu dropdown-menu-sm">
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-header w-100">
+                <i class="icon icon-users"></i> Users
+              </div>
+          </div>
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-body w-100">
+                  <div class="row nav w-100" role="tablist" >
+                      <button type="button" class="btn btn-card-sm w-100" id="users-tab-w" data-toggle="pill" href="#hk-users" role="tab" aria-controls="hk-users-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Users</button>
+                      <button type="button" class="btn btn-card-sm w-100" id="users-edit-tab-w" data-toggle="pill" href="#hk-users-editd" role="tab" aria-controls="hk-users-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New User</button>
+                  </div>
+  </div>
+          </div>
+        </div>
+      </div>
+          </div>
+          <!-- Collapse -->
+          <div id="collapseUsers" class="collapse" aria-labelledby="headingUsers" data-parent="#hk-sidebar-accordion">
+            <div class="card-body card-body-w d-flex">
+                <div class="row nav w-100" role="tablist" >
+                    <button type="button" class="btn btn-card-sm w-100" id="users-tab-w" data-toggle="pill" href="#hk-users" role="tab" aria-controls="hk-users-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Users</button>
+                    <button type="button" class="btn btn-card-sm w-100" id="users-edit-tab-w" data-toggle="pill" href="#hk-users-editd" role="tab" aria-controls="hk-users-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New User</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingLocations">
+            <div class="btn-group d-flex dropright" role="group" aria-label="Heap Keep App">
+       <button type="button" class="btn btn-card btn-card-n w-100 d-none text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="icon icon-pointer"></i>
+        </button>
+        <button type="button" class="btn btn-card btn-card-w w-100" data-toggle="collapse" data-target="#collapseLocations" aria-expanded="true" aria-controls="collapseLocations">  <i class="icon icon-pointer"></i> Locations</button>
+        <div class="dropdown-menu dropdown-menu-sm">
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-header w-100">
+                <i class="icon icon-pointer"></i> Locations
+              </div>
+          </div>
+          <div class="row d-flex">
+              <div class="dropdown-menu-sm-body w-100">
+                  <div class="row nav w-100" role="tablist" >
+                      <button type="button" class="btn btn-card-sm w-100" id="locations-tab-w" data-toggle="pill" href="#hk-locations" role="tab" aria-controls="hk-locations-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Locations</button>
+                      <button type="button" class="btn btn-card-sm w-100" id="locations-edit-tab-w" data-toggle="pill" href="#hk-locations-editd" role="tab" aria-controls="hk-locations-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Location</button>
+                  </div>   </div>
+          </div>
+        </div>
+      </div>
+          </div>
+          <!-- Collapse -->
+          <div id="collapseLocations" class="collapse" aria-labelledby="headingLocations" data-parent="#hk-sidebar-accordion">
+            <div class="card-body card-body-w d-flex">
+                <div class="row nav w-100" role="tablist" >
+                    <button type="button" class="btn btn-card-sm w-100" id="locations-tab-w" data-toggle="pill" href="#hk-locations" role="tab" aria-controls="hk-locations-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Locations</button>
+                    <button type="button" class="btn btn-card-sm w-100" id="locations-edit-tab-w" data-toggle="pill" href="#hk-locations-editd" role="tab" aria-controls="hk-locations-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Location</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingServices">
+              <div class="btn-group d-flex dropright" role="group" aria-label="Heap Keep App">
+         <button type="button" class="btn btn-card btn-card-n w-100 d-none text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="icon icon-wrench"></i>
+          </button>
+          <button type="button" class="btn btn-card btn-card-w w-100" data-toggle="collapse" data-target="#collapseServices" aria-expanded="true" aria-controls="collapseServices">  <i class="icon icon-wrench"></i> Services</button>
+          <div class="dropdown-menu dropdown-menu-sm">
+            <div class="row d-flex">
+                <div class="dropdown-menu-sm-header w-100">
+                  <i class="icon icon-wrench"></i> Services
+                </div>
+            </div>
+            <div class="row d-flex">
+                <div class="dropdown-menu-sm-body w-100">
+                    <div class="row nav w-100" role="tablist" >
+                        <button type="button" class="btn btn-card-sm w-100" id="services-tab-w" data-toggle="pill" href="#hk-services" role="tab" aria-controls="hk-services-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Services</button>
+                        <button type="button" class="btn btn-card-sm w-100" id="services-edit-tab-w" data-toggle="pill" href="#hk-services-editd" role="tab" aria-controls="hk-services-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Service</button>
+                    </div>   </div>
+            </div>
+          </div>
+        </div>
+            </div>
+            <!-- Collapse -->
+            <div id="collapseServices" class="collapse" aria-labelledby="headingServices" data-parent="#hk-sidebar-accordion">
+              <div class="card-body card-body-w d-flex">
+                  <div class="row nav w-100" role="tablist" >
+                      <button type="button" class="btn btn-card-sm w-100" id="services-tab-w" data-toggle="pill" href="#hk-services" role="tab" aria-controls="hk-services-tab" aria-selected="false"><i class="icon icon-pencil"></i> View/Edit Services</button>
+                      <button type="button" class="btn btn-card-sm w-100" id="services-edit-tab-w" data-toggle="pill" href="#hk-services-editd" role="tab" aria-controls="hk-services-editd-tab" aria-selected="false"><i class="icon icon-plus"></i>Add New Service</button>
+                  </div>
+              </div>
+            </div>
+          </div>
+        <!--  -->
+        <div class="card">
+          <div class="card-header" id="headingSettings">
+            <div class="btn-group d-flex dropright" role="group" aria-label="Heap Keep App">
+       <button type="button" class="btn btn-card btn-card-n w-100 d-none text-center">
+          <i class="icon icon-settings"></i>
+        </button>
+        <button type="button" class="btn btn-card btn-card-w w-100">  <i class="icon icon-settings"></i> Settings</button>
+        </div>
+        </div>
+        </div>
+        <!--  -->
+      </div>
+
+
+
+    </div>
+  <!-- End of Sidebr    -->
+  <div id="content" class="right-clm">
+    <div id="handler"><i class="icon icon-arrow-left"></i></div>
+    <div id="main">
+
+    <div class="container-fluid">
+      <div class="tab-content" id="hk-tabContent">
+        <div class="tab-pane fade show active" id="hk-dashboard" role="tabpanel" aria-labelledby="hk-dashboard-tab">
+           <div class="container-fluid">
+              <div class="alert alert-warning" role="alert">
+                  <i class="icon icon-list"></i><strong> Dashboard</strong> Welcome to Heap Keep.
+                </div>
+            </div>
+
+            <div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12">
+      <div class="card mt-3 dashboard-card">
+         <div class="card-header">
+            <h5><i class="icon icon-layers"></i> Assets</h5>
+         </div>
+         <div class="card-body">
+            <h4 class="card-title">16 Assets</h4>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <div class="text-right">
+               <a href="#" class="btn btn-outline-secondary"><i class="icon icon-pencil"></i> View/Edit Assets</a>
+               <a href="#" class="btn btn-outline-secondary"><i class="icon icon-plus"></i> Add New Asset</a>
+            </div>
+         </div>
+         <div class="card-footer text-muted text-right">
+            Updated at Jun 09, 2018
+         </div>
+      </div>
+
+</div>
+</div>
+</div>
+<div class="container-fluid">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="card mt-3 dashboard-card">
+            <div class="card-header">
+               <h5><i class="icon icon-layers"></i> Categories</h5>
+            </div>
+            <div class="card-body">
+               <h4 class="card-title">16 Categories</h4>
+               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+               <div class="text-right">
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-pencil"></i> View/Edit Categories</a>
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-plus"></i> Add New Category</a>
+               </div>
+            </div>
+            <div class="card-footer text-muted text-right">
+               Updated at Jun 09, 2018
+            </div>
+         </div>
+      </div>
+       <div class="col-md-6">
+         <div class="card mt-3 dashboard-card">
+            <div class="card-header">
+               <h5><i class="icon icon-users"></i> Users</h5>
+            </div>
+            <div class="card-body">
+               <h4 class="card-title">16 Assets</h4>
+               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+               <div class="text-right">
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-pencil"></i> View/Edit Users</a>
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-plus"></i> Add New User</a>
+               </div>
+            </div>
+            <div class="card-footer text-muted text-right">
+               Updated at Jun 09, 2018
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="card mt-3 dashboard-card">
+            <div class="card-header">
+               <h5><i class="icon icon-pointer"></i> Locations</h5>
+            </div>
+            <div class="card-body">
+               <h4 class="card-title">16 Assets</h4>
+               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+               <div class="text-right">
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-pencil"></i> View/Edit Locations</a>
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-plus"></i> Add New Location</a>
+               </div>
+            </div>
+            <div class="card-footer text-muted text-right">
+               Updated at Jun 09, 2018
+            </div>
+         </div>
+      </div>
+             <div class="col-md-6">
+         <div class="card mt-3 dashboard-card">
+            <div class="card-header">
+               <h5><i class="icon icon-wrench"></i> Services</h5>
+            </div>
+            <div class="card-body">
+               <h4 class="card-title">16 Categories</h4>
+               <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+               <div class="text-right">
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-pencil"></i> View/Edit Services</a>
+                  <a href="#" class="btn btn-outline-secondary"><i class="icon icon-plus"></i> Add New Service</a>
+               </div>
+            </div>
+            <div class="card-footer text-muted text-right">
+               Updated at Jun 09, 2018
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+        <div class="tab-pane fade" id="hk-assets" role="tabpanel" aria-labelledby="hk-assets-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <strong>View / Edit</strong> Assets.
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-assets-editd" role="tabpanel" aria-labelledby="hk-assets-editd-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Add New Asset</strong> to Assets.
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-categories" role="tabpanel" aria-labelledby="hk-categories-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-layers"></i><strong>View / Edit</strong> Categories
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-categories-editd" role="tabpanel" aria-labelledby="hk-categories-editd-tab">
+          <div class="container-fluid">
+            <div class="alert alert-warning" role="alert">
+                <i class="icon icon-plus"></i><strong>Add New Category</strong> to Categories
+              </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="hk-users" role="tabpanel" aria-labelledby="hk-users-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-users"></i><strong>View / Edit</strong> Users
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-users-editd" role="tabpanel" aria-labelledby="hk-users-editd-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-plus"></i><strong>Add New Users</strong> to Users
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-locations" role="tabpanel" aria-labelledby="hk-locations-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-pointer"></i><strong>View / Edit</strong> Locations
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-locations-editd" role="tabpanel" aria-labelledby="hk-locations-editd-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-plus"></i><strong>Add New Location</strong> to Locations
+                  </div>
+              </div>
+        </div>
+          <div class="tab-pane fade" id="hk-services" role="tabpanel" aria-labelledby="hk-services-tab">
+              <div class="container-fluid">
+                  <div class="alert alert-warning" role="alert">
+                      <i class="icon icon-wrench"></i><strong>View / Edit</strong> Services
+                    </div>
+                </div>
+          </div>
+          <div class="tab-pane fade" id="hk-services-editd" role="tabpanel" aria-labelledby="hk-services-editd-tab">
+              <div class="container-fluid">
+                  <div class="alert alert-warning" role="alert">
+                      <i class="icon icon-plus"></i><strong>Add New Service</strong> to Services
+                    </div>
+                </div>
+          </div>
+        <div class="tab-pane fade" id="hk-settings" role="tabpanel" aria-labelledby="hk-settings-tab">Settingd</div>
+        <div class="tab-pane fade" id="hk-notifications" role="tabpanel" aria-labelledby="hk-notifications-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-pencil"></i><strong>View / Edit</strong> Notification
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-tasks" role="tabpanel" aria-labelledby="hk-tasks-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-pencil"></i><strong>View / Edit</strong> Tasks
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-logs" role="tabpanel" aria-labelledby="hk-logs-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-pencil"></i><strong>View / Edit</strong> Logs
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-asset-reports" role="tabpanel" aria-labelledby="hk-asset-reports-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-printer"></i><strong>Get Assets Reports</strong>
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-category-reports" role="tabpanel" aria-labelledby="hk-category-reports-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-printer"></i><strong>Get Categories Reports</strong>
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-user-reports" role="tabpanel" aria-labelledby="hk-user-reports-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-printer"></i><strong>Get Users Reports</strong>
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-location-reports" role="tabpanel" aria-labelledby="hk-location-reports-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-printer"></i><strong>Get Locations Reports</strong>
+                  </div>
+              </div>
+        </div>
+        <div class="tab-pane fade" id="hk-log-reports" role="tabpanel" aria-labelledby="hk-log-reports-tab">            <div class="container-fluid">
+            <div class="alert alert-warning" role="alert">
+                <i class="icon icon-printer"></i><strong>Get Log / Activities Reports</strong>
+              </div>
+          </div>  </div>
+        <div class="tab-pane fade" id="hk-service-reports" role="tabpanel" aria-labelledby="hk-service-reports-tab">
+            <div class="container-fluid">
+                <div class="alert alert-warning" role="alert">
+                    <i class="icon icon-printer"></i><strong>Get Services Reports</strong>
+                  </div>
+              </div>
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="http://localhost:8080/src/jquery.min.js"></script>
+  <script src="http://localhost:8080/src/popper.min.js"></script>
+  <script src="http://localhost:8080/src/bootstrap4.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
